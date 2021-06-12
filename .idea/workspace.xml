@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a267dc2c-1003-4d12-a5a1-bd09345f1e41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-rest/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-rest/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-rest/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-rest/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-rest/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-rest/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-rest/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-rest/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +34,33 @@
       <option name="project" value="LOCAL" />
       <updated>1623489185878</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second">
+      <created>1623490900029</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623490900029</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="second" />
+    <option name="LAST_COMMIT_MESSAGE" value="second" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="291" y="0" key="CommitChangelistDialog2" timestamp="1623489185352">
+    <state x="291" y="0" key="CommitChangelistDialog2" timestamp="1623490899297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="291" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1623489185352" />
+    <state x="291" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1623490899297" />
     <state x="487" y="65" key="RollbackChangesDialog" timestamp="1623488997334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="487" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623488997334" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1623489187373">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1623490901926">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1623489187373" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1623490901926" />
   </component>
 </project>

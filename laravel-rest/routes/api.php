@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\AboutController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/products', function () {
-    return 'products';
-});
+Route::get('/products', [AboutController::class, 'index']);
+
+Route::post('/products/add', [AboutController::class, 'add']);
+
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
