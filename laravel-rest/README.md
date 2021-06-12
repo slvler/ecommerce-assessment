@@ -1,6 +1,6 @@
 
 
-## About Laravel
+## Laravel
 
 Laravel Rest API
 

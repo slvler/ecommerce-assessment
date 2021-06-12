@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a267dc2c-1003-4d12-a5a1-bd09345f1e41" name="Default Changelist" comment="first">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a267dc2c-1003-4d12-a5a1-bd09345f1e41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/laravel-rest/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-rest/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,20 +19,32 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../js" />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="first">
+      <created>1623489138831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623489138831</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="291" y="0" key="CommitChangelistDialog2" timestamp="1623489005696">
+    <state x="291" y="0" key="CommitChangelistDialog2" timestamp="1623489138242">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="291" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1623489005696" />
+    <state x="291" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1623489138242" />
     <state x="487" y="65" key="RollbackChangesDialog" timestamp="1623488997334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="487" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623488997334" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1623489027319">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1623489167738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1623489027319" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1623489167738" />
   </component>
 </project>
