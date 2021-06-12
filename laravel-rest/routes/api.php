@@ -21,6 +21,8 @@ Route::get('/products', [AboutController::class, 'index']);
 Route::post('/products/add', [AboutController::class, 'add']);
 
 
+Route::get('/products/show/{id}', [AboutController::class, 'select_one']);
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
