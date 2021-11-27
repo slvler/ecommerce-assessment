@@ -30,7 +30,7 @@
                                             <div class="mask">
                                                 <p>{{ $item->price }}</p>
                                                 <div class="tools tools-bottom">
-                                                    <a href="#"><i class="fa fa-link"></i></a>
+                                                    <a href="{{ route() }}"><i class="fa fa-link"></i></a>
                                                     <a href="{{ route('productcontroller.edit', $item->id)  }}"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </div>
