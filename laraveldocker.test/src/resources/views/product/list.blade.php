@@ -26,17 +26,31 @@
                                 <div class="col-md-55">
                                     <div class="thumbnail">
                                         <div class="image view view-first">
-                                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                                            <img style="width: 100%; display: block;" src="{{ asset($item->image) }}" alt="image" />
                                             <div class="mask">
                                                 <p>{{ $item->price }}</p>
                                                 <div class="tools tools-bottom">
-                                                    <a href="{{ route() }}"><i class="fa fa-link"></i></a>
                                                     <a href="{{ route('productcontroller.edit', $item->id)  }}"><i class="fa fa-pencil"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="caption">
-                                            <p>{{ $item->title }}</p>
+                                            <p>{{ $item->title }} - {{ $item->price }} TL</p>
+                                        </div>
+                                        <div  style="display:flex;" >
+
+                                            <form  action="{{ route('cartadd') }}" method="POST" enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" value="{{ $item->id }}" name="id">
+                                                <input type="hidden" value="{{ $item->title }}" name="name">
+                                                <input type="hidden" value="{{ $item->price }}" name="price">
+                                                <input type="hidden" value="{{ $item->title }}"  name="image">
+                                                <input type="hidden" value="{{ $item->category }}"  name="category">
+                                                <input type="hidden" value="1" name="quantity">
+                                                <button  class="btn-xs btn-success float-right">Add Cart</button>
+                                            </form>
+
+
                                             <form action="{{ route('productcontroller.destroy', $item->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')

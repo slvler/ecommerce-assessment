@@ -36,66 +36,74 @@
 
                         <li role="presentation" class="nav-item dropdown open">
                             <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">6</span>
+                                <i style="font-size: 25px !important;" class="fa fa-shopping-basket"></i>
+                                <span class="badge bg-green">{{ Cart::getTotalQuantity()}}</span>
                             </a>
                             <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+
+
+
+                                @foreach ($cartItems as $item)
+
                                 <li class="nav-item">
                                     <a class="dropdown-item">
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="{{ asset('img/img.jpg') }}" alt="Profile Image" /></span>
                                         <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                                        <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
+                                             <span>{{ $item->name }}</span>
+                                             </span>
+
+                                        @if($item->attributes->total > 0)
+                                             <span class="message">
+                                                  {{ $item->attributes->subtotal }} TL - {{ $item->attributes->message }} - {{ $item->attributes->total }} TL
+                                            </span>
+                                        @else
+                                             <span class="message">
+                                                  {{ $item->price }} TL
+                                            </span>
+                                        @endif
+
                                     </a>
+                                    <form style="margin-top: 15px;" action="{{ route('updatecart') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $item->id}}" >
+                                        @if($item->attributes->total > 0)
+                                            <input type="number" name="quantity" value="{{ $item->attributes->quant }}"
+                                        @else
+                                            <input type="number" name="quantity" value="{{ $item->attributes->quant }}"
+                                        @endif
+                                               class="w-6 text-center bg-gray-300" />
+                                        <button class="float-right btn-success">Update</button>
+                                    </form>
+                                    <form action="{{ route('removecart') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{ $item->id }}" name="id">
+                                        <button class="float-right btn-danger">x</button>
+                                    </form>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                        <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                                        <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                        <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                                        <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                        <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                                        <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
-                                    </a>
-                                </li>
+                                @endforeach
+
+
+                                    <li class="nav-item">
+                                        <div class="text-center">
+                                            <a class="dropdown-item">
+
+                                                <strong>Total: {{ Cart::getTotal() }} </strong>
+
+
+                                            </a>
+                                        </div>
+                                    </li>
+
+
                                 <li class="nav-item">
                                     <div class="text-center">
                                         <a class="dropdown-item">
-                                            <strong>See All Alerts</strong>
+                                            <strong>Alışverişi Tamamla</strong>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
                                     </div>
                                 </li>
+
                             </ul>
                         </li>
                     </ul>

@@ -23,8 +23,10 @@ class ProductController extends Controller
     {
         $title = "Product List";
         $product = ProductModel::all();
+        $cartItems = \Cart::getContent();
 
-        return view('product.list', ['title' => $title, 'product' => $product]);
+
+        return view('product.list', ['title' => $title, 'product' => $product,'cartItems' => $cartItems]);
     }
 
     /**
