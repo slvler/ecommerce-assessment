@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductModel;
 use Illuminate\Http\Request;
+
+
+use App\Cart;
 
 class CartController extends Controller
 {
@@ -68,8 +72,7 @@ class CartController extends Controller
                 {
                     if ( $row->price > $request->price)
                     {
-                        echo "gel";
-                        exit;
+
                         $dis = ($request->price / 100) * 20;
                         $price = $request->price - $dis;
                         $quant = $request->quantity;
@@ -122,7 +125,6 @@ class CartController extends Controller
         return redirect()->route('productcontroller.index');
     }
 
-
     public function updateCart(Request $request)
     {
 
@@ -142,6 +144,31 @@ class CartController extends Controller
         return redirect()->route('productcontroller.index');
     }
 
+    public function addcartlist()
+    {
+
+        $userId  = 123;
+
+        $row = 456;
+        $b = \Cart::session($userId)->get($row);
+
+        dd($b);
+
+    }
+
+    public function addcartservice(Request $request)
+    {
+
+        $cart = Cart::create([
+            'id' => "1",
+            'key' => "1",
+            'userID' => "1"
+
+        ]);
+
+        return response()->json(['status' => 'Item Add Successfully !'], 200);
+
+    }
 
 
 }

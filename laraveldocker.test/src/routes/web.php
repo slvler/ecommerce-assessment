@@ -35,6 +35,4 @@ Route::post('/removecart', [CartController::class, 'removecart'])->name('removec
 Route::post('/updatecart', [CartController::class, 'updatecart'])->name('updatecart');
 
 
-Route::get('/deneme', function () {
-   return "tamamke";
-});
+
