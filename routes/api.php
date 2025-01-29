@@ -27,4 +27,7 @@ Route::group(['middleware' => 'auth:api'], function ($router) {
     Route::post('/orders', [\App\Http\Controllers\OrderController::class, 'store'])->middleware('throttle:30,1');
     Route::put('/orders/{id}', [\App\Http\Controllers\OrderController::class, 'update'])->where('id', '[0-9]+')->middleware('throttle:30,1');
     Route::delete('/orders/{id}', [\App\Http\Controllers\OrderController::class, 'delete'])->where('id', '[0-9]+')->middleware('throttle:30,1');
+
+    Route::get('/discount', [\App\Http\Controllers\DiscountController::class, 'index'])->middleware('throttle:30,1');
+
 });
